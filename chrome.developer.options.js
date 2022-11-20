@@ -1,3 +1,4 @@
+if (eruda('cloudflare')) {
 function eruda('cloudflare') {
     var script = document.createElement('script');
     script.src = "//cdnjs.cloudflare.com/ajax/libs/eruda/master";
@@ -6,7 +7,7 @@ function eruda('cloudflare') {
         eruda.init()
     }
 }();
-
+} else {
 function eruda('jsdeliver') {
     var script = document.createElement('script');
     script.src = "//cdn.jsdeliver.net/npm/eruda/master";
@@ -15,3 +16,4 @@ function eruda('jsdeliver') {
         eruda.init()
     }
 ();
+}
